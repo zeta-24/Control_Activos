@@ -81,11 +81,12 @@ function ventana(){
 
 <body>
     <div class="container">
-
+ <!--
 	<div class="page-header">
 	   <h1><img src="<?php echo base_url();?>resources/images/header.jpg" class="img-responsive">
 	   </h1>
 	</div>
+-->
 	<div class="container navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -93,16 +94,16 @@ function ventana(){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <!--<a class="navbar-brand" href="#">Company Info</a>-->
+        
     </div>
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav" id="menu">
-            <li class="active"><a href="<?php echo base_url();?>index.php/auditoria/principal/">Principal</a></li>
+            <li><a href="<?php echo base_url();?>index.php/auditoria/principal/">Auditorías</a></li>
             <li><a href="<?php echo base_url();?>index.php/auditoria/historial/">Historial</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?php echo base_url();?>index.php/ctrLogin/login/">Salir</a></li>
+            <li><a href="<?php echo base_url();?>index.php/ctrLogin/login/"><b>Salir</b></a></li>
         </ul>
     </div>
     </div>

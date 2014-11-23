@@ -13,16 +13,17 @@
 <body>
 	<div class="container">
 		<center>
-			<h1>Historial</h1>
+            <br><br>
+			<h1>Historial de las Auditorías</h1>
 		</center>
-<div class="panel panel-primary">
+<div class="panel-default">
     <div class="panel-heading">
-        Activos
+        Activos Actuales
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
         <div class="table-responsive">
-            <table id="tbActivos" class="display">
+            <table id="tbActivos" class="">
                 <thead>
 					<tr>
 						<th>Fecha</th>
@@ -71,7 +72,8 @@
                         </td>
                         <td>
                             <?php if($fila->estado == 0){ ?>
-                            <a href="<?=base_url()?>index.php/auditoria/crear/">Editar</a> 
+                            <a href="">Editar</a> 
+                            <!-- <a href= <"<?=base_url()?>index.php/auditoria/crear/">Editar</a>  -->
                             <?php       }
                             else{
                             ?>

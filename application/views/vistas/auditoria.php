@@ -115,9 +115,10 @@
 
 <body>
 <div class="container">
-<div class="panel panel-primary">
+    <br><br><br>
+<div class="panel panel-dafault">
     <div class="panel-heading">
-        Activos
+        Auditoría
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
@@ -153,17 +154,17 @@
     <div class="form-group">
         <span>
             Comentario de la auditoría:
-            <textarea id="txtComentario" class="form-control" rows="3"></textarea>
+            <textarea id="txtComentario" class="form-control" rows="2"></textarea>
         </span>
     
     </div>
      
     <div class="form-group">
-        <div align="right">
+        <div align="left">
         <span>
-            <button class="btn btn-primary" onclick="finalizarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Finalizar</button> 
-            <button class="btn btn-primary" onclick="guardarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Guardar</button>
-            <button  type="submit" class="btn btn-primary" onclick="borrarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Cancelar</button>
+            <button class="btn btn-success" onclick="finalizarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Finalizar</button> 
+            <button class="btn btn-success" onclick="guardarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Guardar</button>
+            <button  type="submit" class="btn btn-warning" onclick="borrarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Cancelar</button>
           <!-- <button  type="submit" class="btn btn-primary" onclick="window.open('<?=base_url()?>index.php/auditoria/eliminarAuditoria/<?php echo $this->session->userdata('idAuditoria')?>','_self')">Cancelar</button> -->
         </span>
     </div>

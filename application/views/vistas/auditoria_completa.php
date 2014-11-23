@@ -160,7 +160,7 @@
     </div>
      
     <div class="form-group">
-        <div align="right">
+        <div align="left">
         <span>
             <button class="btn btn-primary" onclick="finalizarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)" disabled="true">Finalizar</button> 
             <button class="btn btn-primary" onclick="guardarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)" disabled="true">Guardar</button>

@@ -100,16 +100,19 @@
 	</script>
 
 <body>
-
-
+<div class="container">
+		<center>
+            <br><br>
+			<h1>Selección de auditoría</h1>
+		</center>
+</div>
 	<div class="row">
 		<div class="container">
 			<!-- Search box Start -->
 			<form action="<?php echo base_url();?>index.php/auditoria/crear/" method="POST">
 			    <div class="well carousel-search hidden-sm">
 			    	<center>
-			    		<div id="example2" class="bs-docs-example">
-							<h4>Selección de auditoría</h4>
+			    		<div id="example2" class="bs-docs-example">							
 							<div class="form-group">
 								<div class="btn-group">
 									<select class="form-control" id="slSedes" name="slSedes" onchange="obtEdificio()">	

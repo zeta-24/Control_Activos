@@ -19,10 +19,10 @@ if (form.inputUsuario.value=="" || form.inputPass.value=="") {
 } 
 //-->
 </script>
-    
+  <!--  
   <div class="page-header">
      <img src="<?php echo base_url();?>resources/images/header.jpg" class="img-responsive">
-        
+   -->     
      
   </div>
   
@@ -38,24 +38,27 @@ if (form.inputUsuario.value=="" || form.inputPass.value=="") {
   </div>
   </div>-->
    <center>
-    
+    <br><br><br><br><br><br><br><br>
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
-        <img src="<?php echo base_url();?>resources/images/tec.jpg">
+                  <br>
+          <p class="text-center"><b> Bienvenido al Sistema de Control de Activos TEC </b> </p>
+        <!-- <img src="<?php echo base_url();?>resources/images/tec.jpg">
+      -->
         <!--<form class="form-signin col-md-12" action="<?php echo base_url();?>index.php/ctrLogin/principal/" method="POST">-->
        
        <!-- <div class="well login-box" >-->
         <form class="form-signin col-*-*" action="<?php echo base_url();?>index.php/auditoria/principal/" method="POST">
           <div class="form-group">
-            <input type="text" value="" id="inputUsuario" name="inputUsuario" class="form-control input-lg" placeholder="Usuario">
+            <input type="text" value="" id="inputUsuario" name="inputUsuario" class="form-group input-lg" placeholder="Usuario">
           </div>
           <div class="form-group">
-              <input type="password" value="" id="inputPass" name="inputPass" class="form-control input-lg" placeholder="Contraseña">
+              <input type="password" value="" id="inputPass" name="inputPass" class="form-group input-lg" placeholder="Contraseña">
           </div>
           <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-lg " value="Iniciar sesión"></input>
+              <input type="submit" class="btn btn-primary btn-sm " value="Ingresar"></input>
               <!--<span class="pull-right"><a href="#">Registrarse</a></span>-->
           </div>
        </form>
