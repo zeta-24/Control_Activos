@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="tipo_contenido"  content="text/html;" http-equiv="content-type" charset="utf-8">
+	<title>Control de Activos</title>
+	   
+    <link href="http://localhost/Control_Activos/bootstrap/css/bootstrap-theme.css" type="text/css" rel="stylesheet" >
+    <link href="http://localhost/Control_Activos/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" >
+  
+<script language="javascript">
+<!--//
+/*This Script allows people to enter by using a form that asks for a
+UserID and Password*/
+function pasuser(form) {
+if (form.inputUsuario.value=="" || form.inputPass.value=="") { 
+            
+alert("No deje espacios en blanco");
+} 
+} 
+//-->
+</script>
+    
+  <div class="page-header">
+     <img src="http://localhost/Control_Activos/resources/images/header.jpg" class="img-responsive">
+        
+     
+  </div>
+  
+</head>
+<body>
+ <!-- <div class="container">
+  <div class="row">
+        <div class="com-md-12">
+          <div class="notification login-alert">
+            Please Enter Your Username And Password!
+          </div>
+        </div>
+  </div>
+  </div>-->
+   <center>
+    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+        <img src="http://localhost/Control_Activos/resources/images/tec.jpg">
+        <!--<form class="form-signin col-md-12" action="http://localhost/Control_Activos/index.php/ctrLogin/principal/" method="POST">-->
+       
+       <!-- <div class="well login-box" >-->
+        <form class="form-signin col-*-*" action="http://localhost/Control_Activos/index.php/auditoria/principal/" method="POST">
+          <div class="form-group">
+            <input type="text" value="" id="inputUsuario" name="inputUsuario" class="form-control input-lg" placeholder="Usuario">
+          </div>
+          <div class="form-group">
+              <input type="password" value="" id="inputPass" name="inputPass" class="form-control input-lg" placeholder="Contraseña">
+          </div>
+          <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-lg " value="Iniciar sesión"></input>
+              <span class="pull-right"><a href="#">Registrarse</a></span>
+          </div>
+       </form>
+     <!--</div> well login-box-->
+     </div>
+     </div>
+        </div> <!--row-->
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!--  <script src="../../dist/js/bootstrap.min.js"></script>-->
+
+    </div> <!-- /container -->
+
+  </center>
+  
+  
+</body>
+</html>
