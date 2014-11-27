@@ -30,7 +30,7 @@ class auditoria extends CI_Controller{
             return;
             }
             ?>
-                <option value="0">Seleccione un edificio</option>
+                <option value="0">Edificio</option>
             <?php
             foreach($edificios as $fila)
             {$cont++;
@@ -56,7 +56,7 @@ class auditoria extends CI_Controller{
                 return;
             }
             ?>
-                <option value="0">Seleccione un piso</option>
+                <option value="0">Piso</option>
             <?php
             foreach($pisos as $fila)
             {$cont++;
@@ -83,7 +83,7 @@ class auditoria extends CI_Controller{
                 return;
             }
             ?>
-             <option value="0">Seleccione una sala</option>
+             <option value="0">Sala</option>
             <?php
             foreach($salas as $fila)
             {$cont++;

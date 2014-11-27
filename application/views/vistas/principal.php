@@ -3,38 +3,26 @@
 <?php $this->load->view("vistas/header");?>
 
   <script type="text/javascript">
-        /*$(document).ready(function() {
-            $("#slSedes").change(function() {
-            	alert(":P");
-                $("#slSedes option:selected").each(function() {
-                    sede = $('#slSedes').val();
-                    $.post(http://controlactivos.site11.com/Control_Activos/index.php/auditoria/obtenerEdificios/", {
-                        sede : sede
-                    }, function(data) {
-                        $("#slEdificios").html(data);
-                    });
-                });
-            })*/
 	function obtEdificio(){
   		sede = $('#slSedes').val();
   		if(sede==0){
-  			$("#slEdificios").empty().append('<option value="0">Seleccione un edificio</option>');
+  			$("#slEdificios").empty().append('<option value="0">Edificio</option>');
   			document.getElementById("slEdificios").disabled=true; 
-  			$("#slPisos").empty().append('<option value="0">Seleccione un piso</option>');
+  			$("#slPisos").empty().append('<option value="0">Piso</option>');
   			document.getElementById("slPisos").disabled=true; 
-  			$("#slSalas").empty().append('<option value="0">Seleccione una sala</option>');
+  			$("#slSalas").empty().append('<option value="0">Sala</option>');
   			document.getElementById("slSalas").disabled=true; 
   			document.getElementById("btnAudtoria").disabled=true; 
   			return;
   		}
-        $.post("http://localhost/Control_Activos/index.php/auditoria/obtenerEdificios/", {
+        $.post("http://localhost/controlactivos/index.php/auditoria/obtenerEdificios/", {
              sede : sede
          }, function(data) {
                $("#slEdificios").html(data);
                document.getElementById("slEdificios").disabled=false; 
-               $("#slPisos").empty().append('<option value="0">Seleccione un piso</option>');
+               $("#slPisos").empty().append('<option value="0">Piso</option>');
                document.getElementById("slPisos").disabled=true; 
-               $("#slSalas").empty().append('<option value="0">Seleccione una sala</option>');
+               $("#slSalas").empty().append('<option value="0">Sala</option>');
                document.getElementById("slSalas").disabled=true; 
 
                document.getElementById("btnAudtoria").disabled=true; 
@@ -44,20 +32,20 @@
 	function obtPiso(){
   		edificio = $('#slEdificios').val();
   		if(edificio==0){
-  			$("#slPisos").empty().append('<option value="0">Seleccione un Piso</option>');
+  			$("#slPisos").empty().append('<option value="0">Piso</option>');
   			document.getElementById("slPisos").disabled=true; 
-  			$("#slSalas").empty().append('<option value="0">Seleccione una sala</option>');
+  			$("#slSalas").empty().append('<option value="0">Sala</option>');
   			document.getElementById("slSalas").disabled=true; 
 
   			document.getElementById("btnAudtoria").disabled=true; 
   			return;
   		}
-        $.post("http://localhost/Control_Activos/index.php/auditoria/obtenerPisos/", {
+        $.post("http://localhost/controlactivos/index.php/auditoria/obtenerPisos/", {
              edificio : edificio
          }, function(data) {
                $("#slPisos").html(data);
                 document.getElementById("slPisos").disabled=false; 
-                $("#slSalas").empty().append('<option value="0">Seleccione una sala</option>');
+                $("#slSalas").empty().append('<option value="0">Sala</option>');
                document.getElementById("slSalas").disabled=true; 
 
                document.getElementById("btnAudtoria").disabled=true; 
@@ -67,13 +55,13 @@
 	function obtSala(){
   		piso = $('#slPisos').val();
   		if(piso==0){
-  			$("#slSalas").empty().append('<option value="0">Seleccione una Sala</option>');
+  			$("#slSalas").empty().append('<option value="0">Sala</option>');
   			document.getElementById("slSalas").disabled=true; 
 
   			document.getElementById("btnAudtoria").disabled=true; 
   			return;
   		}
-        $.post("http://localhost/Control_Activos/index.php/auditoria/obtenerSalas/", {
+        $.post("http://localhost/controlactivos/index.php/auditoria/obtenerSalas/", {
              piso : piso
          }, function(data) {
                $("#slSalas").html(data);  
@@ -94,16 +82,11 @@
 	}
 
     </script>
-
-    <script>
-
-	</script>
-
 <body>
 <div class="container">
 		<center>
             <br><br>
-			<h1>Selección de auditoría</h1>
+			<h1>Agregar Auditorías</h1>
 		</center>
 </div>
 	<div class="row">
@@ -116,7 +99,7 @@
 							<div class="form-group">
 								<div class="btn-group">
 									<select class="form-control" id="slSedes" name="slSedes" onchange="obtEdificio()">	
-										<option value="">Seleccione una sede</option>
+										<option value="">Sede</option>
 										 <?php 
 									        foreach($sede as $fila)
 									        {
@@ -133,31 +116,31 @@
 							<div class="form-group">
 								<div class="btn-group">								
 									<select class="form-control" id="slEdificios" name="slEdificios" onchange="obtPiso()" disabled="true">
-										<option value="">Seleccione un edificio</option>
+										<option value="">Edificio</option>
 									</select>
 
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="btn-group">
-									<h3></h3>
+									
 									<select class="form-control" id="slPisos" name="slPisos" onchange="obtSala()" disabled="true"><!-- disabled="" -->
-										<option value="">Seleccione un piso</option>
+										<option value="">Piso</option>
 									</select>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="btn-group">
-									<h3></h3>
+									
 									<select class="form-control" id="slSalas" name="slSalas" onchange="enable()" disabled="true">
-										<option value="">Seleccione una sala</option>
+										<option value="">Sala</option>
 									</select>
 								</div>
 							</div>
 
 							<div class="btn-group">
-					        	<h3></h3>
-					            <button type="submit" id="btnAudtoria" class="btn btn-primary" disabled="true">Crear Auditoría</button>
+					        	
+					            <button type="submit" id="btnAudtoria" class="btn btn-success" disabled="true">Agregar</button>
 
 					        </div>
 						</div>
@@ -166,10 +149,6 @@
 			    	
 			    </div>
 			</form>
-
-			
-			<!-- Search box End -->
-	
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

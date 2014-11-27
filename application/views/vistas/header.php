@@ -16,44 +16,6 @@
 	<link href="<?php echo base_url(); ?>bootstrap/css/bootstrap-theme.css" type="text/css" rel="stylesheet" >
     <link href="<?php echo base_url(); ?>bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" >
 
-
-
-<!--    <script>
-    var cont = 1;
-    $(document).ready(function () {
-        $(".dropdown-menu li a").click(function(){
-          var selText = $(this).text();
-          $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-          if(cont == 1){
-            var a = document.getElementById('ddl_2');
-            a.className = "btn btn-default dropdown-toggle btn-select2";
-          }
-          
-          if(cont == 2){
-            var a = document.getElementById('ddl_3');
-            a.className = "btn btn-default dropdown-toggle btn-select2";
-          }
-          if(cont == 3){
-            var a = document.getElementById('ddl_4');
-            a.className = "btn btn-default dropdown-toggle btn-select2";
-          }
-          cont++;
-        });
-          
-        })
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $('#tbActivos').dataTable( {
-                "language": {
-                    "url": "<?php echo base_url(); ?>/scripts/plugins/dataTables/Spanish.txt"
-                }
-            });
-        })
-    </script>
--->
 <script>
       $(document).ready(function () {
             $('#tbActivos').dataTable( {
@@ -81,12 +43,7 @@ function ventana(){
 
 <body>
     <div class="container">
- <!--
-	<div class="page-header">
-	   <h1><img src="<?php echo base_url();?>resources/images/header.jpg" class="img-responsive">
-	   </h1>
-	</div>
--->
+
 	<div class="container navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">

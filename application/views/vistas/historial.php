@@ -14,11 +14,11 @@
 	<div class="container">
 		<center>
             <br><br>
-			<h1>Historial de las Auditorías</h1>
+			<h1>Historial de Auditorías</h1>
 		</center>
 <div class="panel-default">
     <div class="panel-heading">
-        Activos Actuales
+        Audotorías Actuales
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">

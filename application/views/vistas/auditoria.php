@@ -10,7 +10,6 @@
             var table=document.getElementById("tbActivos");
             var cont = 0;
             for(var i=1; i<table.rows.length;i++){
-                    //var id = table.rows[i].cells[0].children[0].children[0].children[1];
                    if(table.rows[i].id != "disabled"){
                     console.log(table.rows[i].id);
                     var idActivo = table.rows[i].id;
@@ -24,8 +23,6 @@
                     }
                     
                     var comentario = table.rows[i].cells[4].children[0].children[0].children[0].value;
-                    //var element = td.getElementById('inpComentario')
-                    //console.log(id + " " + cuantitativo + " " + cualitativo + " " + comentario);
                     TableData[cont]={
                         "idAuditoria" : id
                         , "idActivo" : idActivo
@@ -83,9 +80,7 @@
                         var cualitativo = radio.children[1].children[0].children[0].value;
                     }
                     
-                    var comentario = table.rows[i].cells[4].children[0].children[0].children[0].value;
-                    //var element = td.getElementById('inpComentario')
-                    //console.log(id + " " + cuantitativo + " " + cualitativo + " " + comentario);
+                    var comentario = table.rows[i].cells[4].children[0].children[0].children[0].va
                     TableData[cont]={
                         "idAuditoria" : id
                         , "idActivo" : idActivo
@@ -116,20 +111,20 @@
 <body>
 <div class="container">
     <br><br><br>
-<div class="panel panel-dafault">
+<div class="panel panel-default">
     <div class="panel-heading">
         Auditoría
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
         <div class="table-responsive">
-            <table id="tbActivos" class="display">
+            <table id="tbActivos" class="">
                 <thead>
 				<tr>
-						<th>En la sala</th>
-						<th>Activos</th>
-						<th>Valor cuantitativo</th>
-						<th>Valor cualitativo</th>
+						<th>En Sala</th>
+						<th>Activo</th>
+						<th>Calificación</th>
+						<th>Estado</th>
 						<th>Comentario</th>
 					</tr>
                 </thead>
@@ -153,7 +148,7 @@
     <!-- /.panel-body -->
     <div class="form-group">
         <span>
-            Comentario de la auditoría:
+            Comentario:
             <textarea id="txtComentario" class="form-control" rows="2"></textarea>
         </span>
     
@@ -164,8 +159,7 @@
         <span>
             <button class="btn btn-success" onclick="finalizarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Finalizar</button> 
             <button class="btn btn-success" onclick="guardarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Guardar</button>
-            <button  type="submit" class="btn btn-warning" onclick="borrarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Cancelar</button>
-          <!-- <button  type="submit" class="btn btn-primary" onclick="window.open('<?=base_url()?>index.php/auditoria/eliminarAuditoria/<?php echo $this->session->userdata('idAuditoria')?>','_self')">Cancelar</button> -->
+            <button  type="submit" class="btn btn-warning" onclick="borrarAuditoria(<?php echo $this->session->userdata('idAuditoria')?>)">Cancelar</button>          
         </span>
     </div>
     </div>

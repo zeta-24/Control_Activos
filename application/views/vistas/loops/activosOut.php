@@ -3,7 +3,7 @@
                          <div class="col-lg-6">
                             <div class="input-group">
 
-                                <input type="checkbox" disabled="true">
+                                <input type="checkbox" disabled="true" unchecked>
 
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->

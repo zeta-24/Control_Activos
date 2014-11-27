@@ -8,7 +8,7 @@
             $("#provincia").change(function() {
                 $("#provincia option:selected").each(function() {
                     provincia = $('#provincia').val();
-                    $.post("http://localhost/Control_Activos/index.php/auditoria/obtenerEdificios", {
+                    $.post("http://localhost/controlactivos/index.php/auditoria/obtenerEdificios", {
                         provincia : provincia
                     }, function(data) {
                         $("#localidad").html(data);

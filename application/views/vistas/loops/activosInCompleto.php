@@ -2,7 +2,7 @@
                         <td>
                          <div class="col-lg-6">
                             <div class="input-group">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" disabled="true" unchecked>
                                 <!--<input type="hidden" name="country" value="<?php echo $id;?>">-->
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
